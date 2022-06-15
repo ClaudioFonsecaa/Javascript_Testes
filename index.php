@@ -108,7 +108,7 @@
         <!-- Função para aumentar volume -->
         function aumentarVolume() {
             var vid = document.getElementById("video");
-            vid.volume = 0.5;
+            vid.volume = 0.5; <!-- volume no metade atualmente -->
             <!-- volume no máximo 1.0 -->
         }
     </script>
