@@ -40,12 +40,14 @@
         <!-- Botão para a parar -->
         <input type = "button" value = "Stop" onclick = "stop();" />
 
+        <p><p>
 
-            <!-- Video
-            <video width="320" height="240" controls>
+            <!-- Video -->
+            <video  id="video" onmouseover="aumentarVolume()" width="300" height="300" controls>
                 <source src="movie.mp4" type="video/mp4">
                 Your browser does not support the video tag.
-            </video>-->
+            </video>
+
 
     </div>
 
@@ -78,7 +80,7 @@
 
 
         var imgObj = null;
-        var animate ;
+        var animate;
 
         <!-- Função para inicializar a imagem -->
         function init() {
@@ -90,7 +92,7 @@
 
         <!-- Função para mover a imagem para a direita -->
         function moveRight() {
-            imgObj.style.left = parseInt(imgObj.style.left) + 10 + 'px';
+            imgObj.style.left = parseInt(imgObj.style.left) + 1 + 'px';
             animate = setTimeout(moveRight,20);    // call moveRight in 20msec
         }
 
@@ -103,6 +105,12 @@
         window.onload = init;
 
 
+        <!-- Função para aumentar volume -->
+        function aumentarVolume() {
+            var vid = document.getElementById("video");
+            vid.volume = 0.5;
+            <!-- volume no máximo 1.0 -->
+        }
     </script>
 
 
